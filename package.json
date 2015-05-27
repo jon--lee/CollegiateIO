@@ -1,0 +1,27 @@
+{
+  "name": "CollegiateIO",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jon--lee/CollegiateIO.git"
+  },
+  "keywords": [
+    "node",
+    "college"
+  ],
+  "author": "Jonathan Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jon--lee/CollegiateIO/issues"
+  },
+  "homepage": "https://github.com/jon--lee/CollegiateIO",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.4"
+  }
+}
