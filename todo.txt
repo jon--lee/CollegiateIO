@@ -1,0 +1,22 @@
+@todo
+
+SHORTTERM
+
+Back-end
+Design database table structure for basic college info (id, name, address, phone number)
+Present name and id information to the main page.
+work out routes.
+
+
+front-end
+receive and integrate name and id information from server.
+sync with back-end determined routes to next page.
+remove extraneous information from front page.
+update contact information in final section.
+
+LONGTERM
+design layout of about page.
+design layout and functionality of "college" page.
+design interface for  q and a section.
+
+@compeleted
