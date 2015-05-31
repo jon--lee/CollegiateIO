@@ -20,3 +20,8 @@ design layout and functionality of "college" page.
 design interface for  q and a section.
 
 @compeleted
+
+setup database by downloading mongodb using homebrew "brew install mongodb"
+must create file in root directory (ie harddrive) with "mkdir -p /data/db" use sudo if no permissions.
+Give permissions.
+run mongodb using "mongod" in terminal. access at port 27017. add flag "--httpinterface" for interface at port http://localhost:28017/
