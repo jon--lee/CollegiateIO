@@ -3,7 +3,7 @@
 SHORTTERM
 
 Back-end
-Design database table structure for basic college info (id, name, address, phone number)
+Design database table structure for basic college info (id, name, address, phone number, image uri (maybe))
 Present name and id information to the main page.
 work out routes.
 

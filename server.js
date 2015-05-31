@@ -1,10 +1,14 @@
 /*
-	list of dependencies.
+	list of 3rd party dependencies.
  */
 var express = require("express");
 var mongoose = require("mongoose");
 
-
+/*
+	controller imports
+ */
+var mainPage = require("./controllers/main");
+var collegePage = require("./controllers/college");
 
 
 var app = express();								// express for server control
@@ -31,51 +35,10 @@ mongoose.connect(mongooseUri, function (err, res) {
 	}
 });
 
-
-/*
-	All routes should be listed here. The 'link' attribute
-	refers to the relative link in the url that the page should be on.
-	The 'controller' refers to relative path the controller that handles
-	the page. These are later passed to a method to set the route.
- */
-var routes = [
-	{
-		link: '/',
-		controller:'./controllers/main'
-	},
-	{
-		link: '/college',
-		controller:'./controllers/college'
-	}
-];
-
-for (var i = 0; i < routes.length; i++)
-{
-	var route = routes[i];
-	setRoute(route.link, route.controller);
-}
+app.get('/', mainPage);
+app.get('/college', collegePage);
 
 
-
-/*
-	method: setRoute
-	The purpose of this method is to set the routes that connect
-	the links of the pages with the relative links of the controllers.
-	@param link
-	@param controller
- */
-function setRoute(link, controller)
-{
-	app.get(link, function(req, res){
-		require(controller)(req, res);
-	});
-}
-
-/*
-	The purpose of this code block is to initiate the server
-	that listening for page requests. This uses the specified port
-	to do so (may be local or on heroku)
- */
 app.listen(port, function(){
 	console.log("running on http://localhost:" + port);
 });
