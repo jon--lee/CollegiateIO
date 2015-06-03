@@ -13,6 +13,7 @@ receive and integrate name and id information from server.
 sync with back-end determined routes to next page.
 remove extraneous information from front page.
 update contact information in final section.
+find out why the new font is not working for the heroku server.
 
 LONGTERM
 design layout of about page.
