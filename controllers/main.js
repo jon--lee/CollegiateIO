@@ -12,7 +12,6 @@ module.exports = function () {
     
     this.get = function(req, res)
     {
-
     	College.find(function(err, colleges){
     		if(err) console.log("FROM MAIN: there was an error");
     		else	console.log("FROM MAIN: " + colleges);

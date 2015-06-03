@@ -15,5 +15,8 @@ exports.connect = function()
 	{
 		if (!err)	console.log("success connecting to db");
 		else		console.log("connection to db FAILED");
+
+		//if (err)	console.log ('***************ERROR connecting to: ' + mongooseUri + '. ' + err);
+		//else		console.log ('**************Succeeded connected to: ' + mongooseUri);
 	});
 }
