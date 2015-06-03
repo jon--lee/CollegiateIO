@@ -2,12 +2,13 @@
 	list of 3rd party dependencies.
  */
 var express = require("express");
-var mongoose = require("mongoose");
+//var mongoose = require("mongoose");
 
 /*
 	Any controllers and/or internal dependencies
 */
 var Router = require("./router");
+var db = require("./db");
 
 /*
 	models import
@@ -26,11 +27,9 @@ app.set("view engine", "ejs");						// enable ejs functionality for template con
 var router = new Router(app);
 router.route();
 
+db.connect();
 
 
-var mongooseUri = 	process.env.MONGOLAB_URI ||
-					process.env.MONGOHQ_URL ||
-					'mongodb://localhost:27017/test';
 
 
 
@@ -39,7 +38,7 @@ var mongooseUri = 	process.env.MONGOLAB_URI ||
 	the heroku process or locally. connection gives error or success
 	notifications.
  */
-var mongooseUri = 	process.env.MONGOLAB_URI ||
+/*var mongooseUri = 	process.env.MONGOLAB_URI ||
 					process.env.MONGOHQ_URL ||
 					'mongodb://localhost:27017/test';
 
@@ -66,7 +65,7 @@ mongoose.connect(mongooseUri, function (err, res) {
 
 
 
-var berkeley = new College({
+/*var berkeley = new College({
 	name: "Uc Berkeley",
 	address: "3515 oliver ct. lafayette ca"
 });
@@ -90,7 +89,7 @@ console.log("other college: " + stanford.name + "with id: " + stanford._id);
 	}
 });*/
 
-console.log("\n");
+/*console.log("\n");
 
 College.find(function(err, colleges){
 	if(err)
@@ -101,7 +100,7 @@ College.find(function(err, colleges){
 	{
 		console.log("here they are: \n" + colleges);
 	}
-});
+});*/
 
 
 
