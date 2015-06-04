@@ -12,10 +12,17 @@ module.exports = function () {
     
     this.get = function(req, res)
     {
-    	College.find(function(err, colleges){
-    		if(err) console.log("FROM MAIN: there was an error");
-    		else	console.log("FROM MAIN: " + colleges);
+
+    	College.find().select("name").exec(function(err, colleges)
+    	{
+    		if(err)
+    		{
+    			res.render("pages/dbError")
+    		}
+    		else
+    		{
+    			res.render("pages/main", colleges);
+    		}
     	});
-    	res.render("pages/main");
     }
 };
