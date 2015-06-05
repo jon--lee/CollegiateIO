@@ -40,35 +40,35 @@ exports.connect = function()
 	So don't touch it unless you want to
 	fill more or less dummy data.
  */
-exports.loadData = function()
-{
-	var berkeley = new College({
-		name: "UC Berkeley",
-		address: "3515 Oliver Ct. Lafayette, CA",
-		phoneNumber: "000-000-0000",
-		imageUri: "default.png"
-	});
+// exports.loadData = function()
+// {
+// 	var berkeley = new College({
+// 		name: "UC Berkeley",
+// 		address: "3515 Oliver Ct. Lafayette, CA",
+// 		phoneNumber: "000-000-0000",
+// 		imageUri: "default.png"
+// 	});
 
-	var stanford = new College({
-		name: "Stanford University",
-		address: "500 Saratoga Ave. San Jose, CA",
-		phoneNumber: "000-000-0000",
-		imageUri: "default.png"
-	});
+// 	var stanford = new College({
+// 		name: "Stanford University",
+// 		address: "500 Saratoga Ave. San Jose, CA",
+// 		phoneNumber: "000-000-0000",
+// 		imageUri: "default.png"
+// 	});
 
-	var brown = new College({
-		name: "Brown University",
-		address: "3515 Oliver Ct. Providence, RI",
-		phoneNumber: "000-000-0000",
-		imageUri: "default.png"
-	});
+// 	var brown = new College({
+// 		name: "Brown University",
+// 		address: "3515 Oliver Ct. Providence, RI",
+// 		phoneNumber: "000-000-0000",
+// 		imageUri: "default.png"
+// 	});
 
-	berkeley.save();
-	stanford.save();
-	brown.save();
-}
+// 	berkeley.save();
+// 	stanford.save();
+// 	brown.save();
+// }
 
-exports.deleteDatabase = function()
-{
-	mongoose.connection.db.dropDatabase();		//should work, not tested
-}
+// exports.deleteDatabase = function()
+// {
+// 	mongoose.connection.db.dropDatabase();		//should work, not tested
+// }

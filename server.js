@@ -1,25 +1,25 @@
-/*
-	import of any 3rd party dependencies.
+/**
+ * import for any third party dependencies.
  */
 var express = require("express");					// express module: ground work library for handling server response.
 
 
-/*
-	import for any controllers and/or internal dependencies
-*/
+/**
+ * import for any controllers and/or internal dependencies
+ */
 var Router = require("./router");					// Router module for handling routes and requests
 var db = require("./db");							// database module for handling connection and other database overhead
 
 
-/*
-	import for models
+/**
+ * import for models
  */
 var College = require("./models/College");			//model for college collection for mongoose
 
 
 
-/*
-	Handling of server processes
+/**
+ * Handling of server processes
  */
 var app = express();								// express for server control
 var port = process.env.PORT || 8080;				// set port to default for process port (heroku) or local 8080

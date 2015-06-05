@@ -13,6 +13,9 @@ module.exports = function () {
     this.get = function(req, res)
     {
 
+    	// Query the colleges selecting on the name (id is included)
+    	// upon any error, the dbError page is rendered, otherwise
+    	// the list of colleges is passed to the view
     	College.find().select("name").exec(function(err, colleges)
     	{
     		if(err)
